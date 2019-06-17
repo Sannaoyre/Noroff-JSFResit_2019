@@ -14,7 +14,7 @@
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  background-color: #D4D4E2;
   color: #2c3e50;
 }
 #nav {
@@ -27,4 +27,9 @@
     }
   }
 }
+
+html{
+  background-color: #D4D4E2;
+}
+
 </style>

@@ -1,29 +1,48 @@
 form{
+  margin-top: 5%;
   width: 90%;
-  padding: 7%;
+  padding: 5%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   box-shadow: 5px 10px 18px black;
-  background-color: transparent;
-  border: 1px solid black;
+  background-color: #ffffff;
+  border: 1px solid #E8E8E8;
+  margin-bottom: 10%;
+
+  select{
+    color: #595959;
+    width: 100%;
+    margin-top: 10%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #E8E8E8;
+    &:required:invalid {
+      color: gray;
+    }
+    option[value=""][disabled] {
+      display: none;
+    }
+    option {
+      color: black;
+    }
+  }
 
   input{
       width: 100%;
-      margin: 5px;
-      padding: 5px;
+      margin: 2px;
+      padding: 2px;
       border: none;
       margin-top: 8%;
       font-weight: 100;
       color: black;
       background-color: transparent;
       font-size: 16px;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid #E8E8E8;
 
       &:focus{
         outline: none !important;
-        background-color: transparent;
-        border: 1px solid black;
+        background-color: #f2f2f2;
         &::-moz-placeholder { color:transparent; }
         &::-moz-placeholder { color:transparent; }
         &::-ms-input-placeholder { color:transparent; }
@@ -31,9 +50,10 @@ form{
       }
 
       &::placeholder{
-        color: black;
+        color: #595959;
     }
   }
+
 
   textarea{
     margin: 5px;
@@ -46,15 +66,13 @@ form{
     margin-bottom: 10%;
     border-radius: 0.1em;
     color: black;
-    font-family: 'Lato, sans-serif';
     background-color: transparent;
     font-size: 16px;
-    border: 1px solid black;
+    border: 1px solid #E8E8E8;
 
     &:focus{
       outline: none !important;
-      background-color: transparent;
-      border: 1px solid black;
+      background-color: #f2f2f2;
       &::-moz-placeholder { color:transparent; }
       &::-moz-placeholder { color:transparent; }
       &::-ms-input-placeholder { color:transparent; }
@@ -62,7 +80,7 @@ form{
     }
 
     &::placeholder{
-      color: black;
+      color: #595959;
     }
   }
 }
@@ -78,57 +96,26 @@ form{
 @media screen and (min-width: 700px){
   form{
     width: 70%;
-    padding: 7%;
+    padding: 5%;
     border: none;
-    background-color: #ffffff;
+    margin-top: 15%;
 
     input{
         margin: 5px;
         padding: 5px;
         border: none;
         margin-top: 5%;
-        color: black;
         font-size: 18px;
         border-bottom: 2px solid #E8E8E8;
-
-        &:focus{
-          background-color: white;
-          border: 1px solid white;
-          &::-moz-placeholder { color:#595959; }
-          &::-moz-placeholder { color:#595959; }
-          &::-ms-input-placeholder { color:#595959; }
-          &::-webkit-input-placeholder { color:#595959; }
-        }
-
-        &::placeholder{
-          color: #595959;
-      }
     }
 
     textarea{
       margin: 5px;
       padding: 5px;
-      border: none;
       margin-top: 5%;
-      border-radius: 0.1em;
-      color: black;
       font-size: 18px;
-      background-color: #ffffff;
       border: 2px solid #E8E8E8;
 
-      &:focus{
-        outline: none !important;
-        background-color: white;
-        border: 1px solid white;
-        &::-moz-placeholder { color:#595959; }
-        &::-moz-placeholder { color:#595959; }
-        &::-ms-input-placeholder { color:#595959; }
-        &::-webkit-input-placeholder { color:#595959; }
-      }
-
-      &::placeholder{
-        color: #595959;
-      }
     }
   }
 }
@@ -136,6 +123,8 @@ form{
 @media screen and (min-width: 900px){
   form{
     width: 40%;
-    padding: 5%;
+    padding: 2%;
+    margin-top: 5%;
+
   }
 }
