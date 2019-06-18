@@ -5,7 +5,7 @@
       <h3 class="[ header_text-small ]">Please fill out the form below</h3>
     </div>
 
-    <form @submit.prevent="checkForm" action="/" method="post" v-if="!savingSuccessful" >
+    <form @submit="checkForm" action="/" method="post" v-if="!savingSuccessful" >
       <b-container fluid>
         <b-row>
 
@@ -51,8 +51,6 @@
         <p>SEND</p>
       </button>
 
-
-
     </form>
 
     <div class="[ success ]" v-if="savingSuccessful">
@@ -91,10 +89,11 @@ export default {
      var b = this.checkSelected();
      var c = this.checkphone();
      var d = this.checkMessage();
-     if (a&&b&&c&&d) return true;
-     e.preventDefault();
+     if (a&&b&&c&&d) return this.savingSuccessful = true;
+     e.preventDefault()
+     //this.savingSuccessful = true;
 
-     this.savingSuccessful = true;
+
    },
 
    checkName() {

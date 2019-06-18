@@ -4,7 +4,7 @@
       <img class="[ header_image ]" src="@/assets/background.png">
       <img class="[ header_image-mobile ]" src="@/assets/background_mobile.png">
         <div class="[ header_text ]">
-          <h1 class="[ header_text-large ]">Check out the Pokémons</h1>
+          <h1 class="[ header_text-large ]">Check out the <span class="[ header_text-grass ]"> Grass </span>Pokémons</h1>
           <h3 class="[ header_text-small ]">Gotta Catch 'Em All!</h3>
           <a href="#"><img class="[ header_text-image ]" src="@/assets/arrow.png" v-scroll-to="'#element'"></a>
        </div>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'HomeHeader',
+  name: 'GrassHeader',
 }
 </script>
 
@@ -38,6 +38,9 @@ export default {
     &-large{
       font-size: 25px;
     }
+    &-grass{
+      color: $dark-green;
+    }
     &-small{
       font-size: 16px;
     }
@@ -47,7 +50,6 @@ export default {
       opacity: 0.6;
       &:hover{
         opacity: 1;
-
       }
     }
   }

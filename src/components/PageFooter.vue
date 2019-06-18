@@ -42,6 +42,7 @@ export default {
 
 footer{
   background-color: #BEBED3;
+  margin-top: 5%;
   p{
     margin: 10px;
     text-align: left;

@@ -2,7 +2,10 @@
   <div>
     <PageNavigation></PageNavigation>
     <HomeHeader></HomeHeader>
+    <HomeSearchfield></HomeSearchfield>
+     <CardSmart></CardSmart>
     <PageFooter></PageFooter>
+
   </div>
 </template>
 
@@ -10,6 +13,8 @@
 import PageNavigation from '@/components/PageNavigation.vue';
 import HomeHeader from '@/components/HomeHeader.vue';
 import PageFooter from '@/components/PageFooter.vue';
+import CardSmart from '@/components/HomeCardssmart.vue';
+import HomeSearchfield from '@/components/HomeSearchfield.vue';
 
 export default {
 
@@ -17,7 +22,9 @@ export default {
   components: {
     PageNavigation,
     HomeHeader,
-    PageFooter
+    PageFooter,
+    CardSmart,
+    HomeSearchfield
 
   }
 }
