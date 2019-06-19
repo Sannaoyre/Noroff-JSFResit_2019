@@ -67,8 +67,10 @@ button:focus{
 .search_button{
   background: transparent;
   border: none;
+  border-bottom: 2px solid $purple ;
   padding: 0px 0px 0px;
-  margin-left: -50px;
+  margin: 0px 0px 0px 0px;
+  
   &-image{
     width: 20%;
     &:hover{

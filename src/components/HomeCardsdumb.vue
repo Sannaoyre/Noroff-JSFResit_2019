@@ -2,9 +2,9 @@
     <div class="[ cardContainer ]">
       <b-container fluid>
         <b-row>
-          <b-col sm="12" md="3" lg="3" :href="card.href" v-for="card in cards">
-            <img class="[ cardContainer_card ]" :src="card.imageUrl">
-            <button class="[ card_button ]"><p>View me</p></button>
+          <b-col sm="12" md="3" lg="3" :href="card.href" v-for="(card, index) in cards">
+            <img class="[ cardContainer_card ]" :src="card.imageUrl" :id="card.id">
+            <button class="[ card_button ]" @click="reply_click(index)"><p>View me</p></button>
           </b-col>
         </b-row>
       </b-container>
@@ -16,7 +16,17 @@
 <script>
 export default {
   name: 'CardDumb',
-  props: ['cards']
+  props: ['cards'],
+
+  methods:{
+    reply_click(index) {
+  // console.log(index);
+     localStorage.setItem("cardinfo", JSON.stringify(this.cards[index]));
+
+     window.location.href = "/#/specific";
+   },
+
+  }
 };
 
 </script>
@@ -41,6 +51,8 @@ export default {
 
 
 @media screen and (min-width: 700px){
+@import '@/styles/main.scss';
+
   .cardContainer{
     margin-left: 10%;
     margin-right: 10%;

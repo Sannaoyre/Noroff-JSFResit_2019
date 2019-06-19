@@ -144,6 +144,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
+@import '@/styles/_form.scss';
 
 body{
   background-color: $gray;
@@ -179,16 +180,11 @@ span{
     transform: translate(-50%, -50%);
     color: $purple;
     &-large{
-      font-size: 50px;
+      font-size: 30px;
     }
     &-small{
-      font-size: 22px;
+      font-size: 18px;
     }
-  }
-  &_image{
-    width: 100%;
-    height: auto;
-    margin-top: 5%;
   }
 }
 
@@ -200,6 +196,18 @@ span{
     margin-top: 20%;
     margin-bottom: 50%;
     font-size: 20px;
+  }
+  .header{
+    &_text {
+      top: 25%;
+      left: 50%;
+      &-large{
+        font-size: 50px;
+      }
+      &-small{
+        font-size: 22px;
+      }
+    }
   }
 }
 
