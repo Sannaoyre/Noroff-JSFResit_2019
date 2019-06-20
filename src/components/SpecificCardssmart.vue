@@ -1,9 +1,12 @@
 <template>
-  <div class="[ cardSpecific ]">
+  <div>
     <h1>View card</h1>
-    <p>{{name}}</p>
-    <img v-bind:src="imgsrc" alt="Picture of card">
-    <SpecificButtondumb></SpecificButtondumb>
+    <div class="[ cardSpecific ]">
+      <p class="[ cardSpecific_name ]">{{name}}</p>
+      <p class="[ cardSpecific_type ]">{{types}}</p>
+      <img v-bind:src="imgsrc" alt="Picture of card" class="[ cardSpecific_img ]">
+      <SpecificButtondumb></SpecificButtondumb>
+    </div>
   </div>
 </template>
 
@@ -20,6 +23,7 @@ export default {
   data(){
     return{
       name: "",
+      types: "",
       imgsrc: ""
     }
   },
@@ -30,6 +34,7 @@ export default {
     console.log(myCard)
       this.name = myCard.name;
       this.imgsrc = myCard.imageUrlHiRes;
+      this.types = 'Type:' + " " +  myCard.types;
 
    }
  },
@@ -47,18 +52,53 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/styles/main.scss';
-
+h1{
+  text-align: center;
+  margin-top: -5%;
+}
 .cardSpecific{
  height: auto;
  margin: auto;
- width: 50%;
+ width: 80%;
  border: 3px solid $purple;
  padding: 10px;
  text-align: center;
- p{
+ &_name{
    font-size: 40px;
+   color: $purple;
    font-weight: bolder;
  }
+ &_type{
+   font-size: 20px;
+   color: $purple;
+   font-weight: bolder;
+ }
+ &_img{
+   width: 70%;
+ }
+}
+@media screen and (min-width: 700px){
+  .cardSpecific{
+    width: 60%;
+  }
+}
+@media screen and (min-width: 900px){
+  h1{
+    margin-top: -5%;
+  }
+  .cardSpecific{
+   width: 30%;
+   padding: 10px;
+   &_name{
+     font-size: 40px;
+   }
+   &_type{
+     font-size: 20px;
+   }
+   &_img{
+     width: 70%;
+   }
+  }
 }
 
 </style>
