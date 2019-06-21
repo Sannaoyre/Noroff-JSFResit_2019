@@ -2,8 +2,8 @@
   <div class="[ searchContainer ]">
 
     <form>
-      <input />
-      <button class="[ search_button ]">
+      <input type="text" v-model="search" placeholder="Search for pokémons" @keyup="getNames">
+      <button class="[ search_button ]" @click="getNames">
         <img src="@/assets/search.png" class="[ search_button-image ]" alt="Search icon">
       </button>
     </form>
@@ -17,6 +17,26 @@
 
 export default {
   name: 'HomeSearchfield',
+  props: ['cards'],
+  data (){
+    return{
+      search: ""
+    }
+  },
+  methods: {
+    getNames(){
+      //console.log(this.search);
+      var regex = new RegExp(this.search, "gi");
+      var myCards = this.cards.filter ( function (card) {
+        //console.log (regex, card.name);
+        return card.name.match(regex); // Returner alle med treff
+      });
+      console.log (myCards); // Har en mindre liste med alle treff
+      // Lag en dropdown fra inputfelt med <a href="# med id på kort">
+      // Eller få oppdatert cards med myCards før utlisting
+
+    }
+  }
 }
 
 </script>
@@ -27,8 +47,8 @@ export default {
 @import '@/styles/main.scss';
 
 .searchContainer {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 12%;
+  margin-right: 12%;
   margin-top: 10%;
   form {
     display:flex;
@@ -48,6 +68,9 @@ export default {
     &:focus{
       outline: none;
       background-color: #BEBED3;
+    }
+    &::placeholder{
+      color: $purple;
     }
   }
 }

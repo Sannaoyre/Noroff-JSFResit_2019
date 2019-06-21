@@ -1,19 +1,24 @@
 <template>
+  <div>
+    <HomeSearchfield v-bind:cards="cards"></HomeSearchfield>
     <CardDumb v-bind:cards="cards"/>
+  </div>
 </template>
 
 <script>
 import CardDumb from './HomeCardsdumb.vue';
+import HomeSearchfield from '@/components/HomeSearchfield.vue';
 
 export default {
   name: 'CardSmart',
   components:{
-    CardDumb
+    CardDumb,
+    HomeSearchfield
   },
 
   data(){
     return{
-      cards: []
+      cards: [],
     }
   },
 
@@ -27,7 +32,7 @@ export default {
     .then(function(myJson) {
       app.cards = myJson.cards;
     });
-  }
+  },
 };
 
 

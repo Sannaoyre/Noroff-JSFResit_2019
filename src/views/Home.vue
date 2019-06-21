@@ -2,7 +2,6 @@
   <div>
     <PageNavigation></PageNavigation>
     <HomeHeader></HomeHeader>
-    <HomeSearchfield></HomeSearchfield>
      <CardSmart></CardSmart>
     <PageFooter></PageFooter>
 
@@ -14,7 +13,7 @@ import PageNavigation from '@/components/PageNavigation.vue';
 import HomeHeader from '@/components/HomeHeader.vue';
 import PageFooter from '@/components/PageFooter.vue';
 import CardSmart from '@/components/HomeCardssmart.vue';
-import HomeSearchfield from '@/components/HomeSearchfield.vue';
+
 
 export default {
 
@@ -23,9 +22,7 @@ export default {
     PageNavigation,
     HomeHeader,
     PageFooter,
-    CardSmart,
-    HomeSearchfield
-
+    CardSmart
   }
 }
 </script>

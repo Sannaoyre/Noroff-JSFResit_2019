@@ -21,18 +21,22 @@ export default {
   methods:{
     reply_click(index) {
   // console.log(index);
+  //console.log('props' + this.cards)
      localStorage.setItem("cardinfo", JSON.stringify(this.cards[index]));
-
      window.location.href = "/#/specific";
-   },
 
-  }
+   }
+  },
+
 };
 
 </script>
 
 
+
+
 <style lang="scss" scoped>
+@import '@/styles/main.scss';
   .cardContainer{
     margin-left: 5%;
     margin-right: 5%;
