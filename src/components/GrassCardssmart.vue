@@ -27,15 +27,12 @@ export default {
     .then(function(myJson) {
       app.cards = myJson.cards;
       app.cards = app.cards.filter ( function (card) {
-        //console.log (card.types);
         if (card.types !== undefined) {
           if (card.types[0] === "Grass") {
-          //  console.log (card);
             return card;
           }
         }
       })
-      //console.log (app.cards);
     });
   }
 };

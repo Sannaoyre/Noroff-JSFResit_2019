@@ -29,18 +29,13 @@ export default {
   },
   methods:{
     readValue() {
-      var myCard = JSON.parse(localStorage.getItem("cardinfo"));
-    // console.log(myCard.name, myCard.id, myCard.imageUrl);
-    console.log(myCard)
+      var myCard = JSON.parse(localStorage.getItem("cardinfo")); //get the card info from localStorage
       this.name = myCard.name;
       this.imgsrc = myCard.imageUrlHiRes;
       this.types = 'Type:' + " " +  myCard.types;
 
    }
  },
-
- created: function () {
-   	},
    	mounted: function () {
    		this.readValue();
    	},

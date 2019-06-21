@@ -111,7 +111,7 @@ export default {
   methods:{
     readMore() {
       var myCard = JSON.parse(localStorage.getItem("cardinfo"));
-      
+
       this.isActive = !this.isActive;
 
       this.name = 'Name:' + " " + myCard.name;
@@ -151,8 +151,6 @@ export default {
       this.resistances = "Resistances:";
       this.resistancesType = "Type:" + " " + myCard.resistances[0].type;
       this.resistancesValue = "Value:" + " " + myCard.resistances[0].value;
-
-
 
    }
  },

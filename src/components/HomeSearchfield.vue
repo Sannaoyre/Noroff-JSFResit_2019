@@ -25,16 +25,11 @@ export default {
   },
   methods: {
     getNames(){
-      //console.log(this.search);
       var regex = new RegExp(this.search, "gi");
       var myCards = this.cards.filter ( function (card) {
-        //console.log (regex, card.name);
-        return card.name.match(regex); // Returner alle med treff
+        return card.name.match(regex);
       });
-      console.log (myCards); // Har en mindre liste med alle treff
-      // Lag en dropdown fra inputfelt med <a href="# med id på kort">
-      // Eller få oppdatert cards med myCards før utlisting
-
+      console.log (myCards);
     }
   }
 }

@@ -91,9 +91,6 @@ export default {
      var d = this.checkMessage();
      if (a&&b&&c&&d) return this.savingSuccessful = true;
      e.preventDefault()
-     //this.savingSuccessful = true;
-
-
    },
 
    checkName() {

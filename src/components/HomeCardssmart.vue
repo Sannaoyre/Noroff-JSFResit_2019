@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HomeSearchfield v-bind:cards="cards"></HomeSearchfield>
+  <!--  <HomeSearchfield v-bind:cards="cards"></HomeSearchfield> -->
     <CardDumb v-bind:cards="cards"/>
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
   },
 
   data(){
-    return{
+    return {
       cards: [],
     }
   },
